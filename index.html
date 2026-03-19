@@ -8,7 +8,7 @@
     <style>
         /* General Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; color: #000; background-color: #fff; }
+        body { font-family: 'Poppins', sans-serif; color: #000; background-color: #fff; position: relative; }
 
         /* Header */
         header {
@@ -17,8 +17,22 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-        
+
+        /* Watermark in Header */
+        .watermark-header {
+            position: absolute;
+            top: 10px;  /* Adjust this value to position vertically */
+            left: 10px; /* Adjust this value to position horizontally */
+            opacity: 0.3; /* Increased transparency for better visibility */
+            pointer-events: none; /* Prevent interactions */
+            z-index: 0; /* Place it behind the heading */
+            width: 80px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            filter: drop-shadow(0 0 5px white); /* Add white shadow for contrast */
+        }
+
         nav a {
             margin: 0 15px;
             color: #fff;
@@ -60,12 +74,13 @@
 
     <!-- Header -->
     <header>
+        <img src="img/logo.png" alt="SERT IST Logo" class="watermark-header">
         <h1>SERT IST</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#expertise">Expertise</a>
-            <a href="#application">Application</a> <!-- Updated navigation -->
+            <a href="#application">Application</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -88,7 +103,7 @@
             <p>We specialize in Software Development, AI & Data Science, Robotics & Embedded Systems, and STEM Education.</p>
         </section>
 
-        <!-- New Application Section -->
+        <!-- Application Section -->
         <section id="application">
             <h2>Software Engineering Summer Training Program</h2>
             <p>Join our comprehensive summer training program designed for aspiring software engineers. This program aims to provide practical knowledge and skills through hands-on projects, mentoring, and collaboration with industry experts.</p>

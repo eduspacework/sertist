@@ -7,6 +7,22 @@
     <title>Software Engineering Summer Training</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Additional CSS for watermark logo */
+        .logo {
+            position: absolute;
+            top: 10px;  /* Adjust this value to position vertically */
+            left: 10px; /* Adjust this value to position horizontally */
+            opacity: 0.3; /* Adjust the transparency for watermark effect */
+            pointer-events: none; /* Prevent interactions with the logo */
+            width: 80px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        header {
+            position: relative; /* Ensure header positioning allows absolute children */
+        }
+    </style>
 </head>
 <body>
     <header>
